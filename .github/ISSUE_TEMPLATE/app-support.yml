@@ -1,0 +1,45 @@
+name: アプリのサポート
+description: アプリの不具合や質問を報告します
+title: "[アプリ名] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        パスワード、決済情報、住所、電話番号などの個人情報は書かないでください。この内容は公開されます。
+  - type: dropdown
+    id: app
+    attributes:
+      label: アプリ
+      options:
+        - 行と列の数字パズル
+        - 一斉スライドパズル
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 内容
+      options:
+        - ゲームの不具合
+        - 広告・ヒント
+        - 広告フリー購入・復元
+        - その他の質問
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 端末とiOSバージョン
+      placeholder: 例：iPhone 15 / iOS 18.6
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 発生した内容と操作手順
+      placeholder: どの画面で、何をしたときに、どうなったかを記載してください。
+    validations:
+      required: true
+
